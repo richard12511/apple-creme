@@ -9,3 +9,8 @@ where
   addedPolys = map sum $ transpose polys
   areThereAny = any (>4) [1,2,3,4,5]
   areTheyAll = all (>4) [1,2,3,4,5]
+  anyCapitals = any (`elem` ['A'..'Z']) "Hello Babe"
+  multipliedBy2TenTimes = take 10 $ iterate (*2) 2
+  --sum of all third powers under 1000
+  sumOfAllThirdPowers = sum $ takeWhile (<1000) $ map (^3) [1..]
+  stock = [(994.4,2008,9,1),(995.2,2008,9,2),(999.2,2008,9,3),(1001.4,2008,9,4),(998.3,2008,9,5)]
