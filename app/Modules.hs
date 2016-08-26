@@ -16,3 +16,6 @@ where
   stock = [(994.4,2008,9,1),(995.2,2008,9,2),(999.2,2008,9,3),(1001.4,2008,9,4),(998.3,2008,9,5)]
   --when did stock first go above 1000
   (price, year, month, day) = head $ dropWhile (\(price,year,month,day) -> price <= 1000) stock
+  --how many times does each element appear in the list
+  list = [1,4,1,1,6,2,2,2,3,3,2,2,2,5,6,7]
+  numTimes = map (\l -> (head l, length l)) $ group.sort $ list
