@@ -14,3 +14,5 @@ where
   --sum of all third powers under 1000
   sumOfAllThirdPowers = sum $ takeWhile (<1000) $ map (^3) [1..]
   stock = [(994.4,2008,9,1),(995.2,2008,9,2),(999.2,2008,9,3),(1001.4,2008,9,4),(998.3,2008,9,5)]
+  --when did stock first go above 1000
+  (price, year, month, day) = head $ dropWhile (\(price,year,month,day) -> price <= 1000) stock
