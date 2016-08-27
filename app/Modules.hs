@@ -19,3 +19,12 @@ where
   --how many times does each element appear in the list
   list = [1,4,1,1,6,2,2,2,3,3,2,2,2,5,6,7]
   numTimes = map (\l -> (head l, length l)) $ group.sort $ list
+  --sum
+  sum' :: (Num a) => [a] -> a
+  sum' [] = 0
+  sum' (x:xs) = foldl (\acc x -> acc + x) 0 xs
+
+  elem' :: (Eq a) => a -> [a] -> Bool
+  elem' y ys = foldl (\acc x -> if x == y then True else acc) False ys
+
+  partitionedList = partition (`elem` ['A'..'Z']) "hellO There everYbody"
