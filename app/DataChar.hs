@@ -6,4 +6,4 @@ where
 
   message = "hey guys it's me"
   defaultWords = words message
-  newWords = filter (not.all isSpace) $ groupBy ((==) `on` isSpace) message
+  newWords = filter (not.any isSpace) . groupBy ((==) `on` isSpace) $ message
