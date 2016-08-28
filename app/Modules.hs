@@ -28,5 +28,9 @@ where
   elem' y ys = foldl (\acc x -> if x == y then True else acc) False ys
 
   listDiff = [1..10] \\ [2,3]
+  inters = [1,2,3] `intersect` [3,4,5]
+  un = "hey man" `union` "man what is up"
+  values = [-4.3, -2.4, -1.2, 0.4, 2.3, 5.9, 10.5, 29.1, 5.3, -2.4, -14.5, 2.9, 2.3]
+  groupedValuesByNegPos = groupBy (\x y -> (x >= 0) == (y >= 0)) values
 
   partitionedList = partition (`elem` ['A'..'Z']) "hellO There everYbody"
